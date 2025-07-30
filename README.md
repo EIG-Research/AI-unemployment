@@ -30,7 +30,7 @@ To run, download the data from the accompanying dropbox links into the /data/1ra
 ## Code
 
 1. <b>01 Crosswalks.R</b> Constructs crosswalks and the primary AI exposure measures from Felten et al.
-2. <b>02 Microdata Monthly Build.R</b> Constructs primary datasets for analysis (, , and )
+2. <b>02 Microdata Monthly Build.R</b> Constructs primary datasets for analysis (cps_monthly_w_xposure_xwalked.dta, cps_asec_w_xposure_xwalked.dta, and cps_org_w_xposure_xwalked.dta)
 3. <b>03 Main Analysis.R</b> Creates charts and statistics cited in the main text.
 4. <b>04 Appendix.R</b> Creates charts and statistics cited in the accompanying appendix.
 
