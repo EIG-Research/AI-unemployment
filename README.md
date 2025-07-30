@@ -5,3 +5,29 @@ This repository contains the data and code to generate estimates in "All Quiet o
 ----------
 
 ## Data
+
+### Microdata
+1. Current Population Survey (CPS) monthy samples January 2015 - June 2025, downloaded from [IPUMS](https://cps.ipums.org/cps/) DOWNLOAD: [cps_basic_monthly.dta.gz]
+2. CPS Annual Social and Economic Supplement (ASEC) samples March 2015 - March 2024, downloaded from [IPUMS](https://cps.ipums.org/cps/). DOWNLOAD: [cps_asec.dta.gz]
+3. CPS Outgoing Rotational Group (ORG) samples 2015 - 2024, downloaded from the [Economic Policy Institute](https://microdata.epi.org/). DOWNLOAD: [epi_cpsorg_1979_2025]
+
+### Crosswalks
+5. 2010 SOC to 2018 SOC Crosswalk, downloaded from the [Bureau of Labor Statistics (BLS)](https://www.bls.gov/soc/2018/soc_2010_to_2018_crosswalk.xlsx). DOWNLOAD: [soc_2010_to_2018_crosswalk.xlsx]()
+6. Census SOC to Census occupation code crosswalk, downloaded from [Census](https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html). DOWNLOAD: [2018-occupation-code-list-and-crosswalk.xlsx]()
+7. [O*NET](https://www.onetcenter.org/db_releases.html) datasets 25.0, and 25.1. DOWNLOAD: [db_25_0_excel](), and [db_25_1_excel]()
+8. David Dorn to 1990 Census crosswalk, downloaded from [Dorn's website](https://www.ddorn.net/data.htm). DOWNLOAD: [occ1990_occ1990dd.zip]()
+
+### AI Exposure measures
+8. Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. Strategic Management Journal, 42(12), 2195–2217. [https://doi.org/10.1002/smj.3286](https://doi.org/10.1002/smj.3286). Downloaded from the accompanying [GitHub](https://github.com/AIOE-Data/AIOE). DOWNLOAD: [AIOE_DataAppendix.xlsx]()
+9. Tyna Eloundou et al., GPTs are GPTs: Labor market impact potential of LLMs. Science 384,1306-1308 (2024). [https://arxiv.org/abs/2303.10130](https://arxiv.org/abs/2303.10130). Downloaded from the accompanying [GitHub](https://github.com/openai/GPTs-are-GPTs). DOWNLOAD: [gptsRgpts_occ_lvl.csv](gptsRgpts_occ_lvl.csv)
+10. The Labor Impact of Generative AI on Firm Values (Eisfeldt, Schubert, Taska, Zhang, 2024).[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627). Downloaded from the accompanying [GitHub](https://github.com/gschubert/website/blob/gh-pages/genaiexp_estz_occscores.csv). DOWNLOAD: [genaiexp_estz_occscores.csv]()
+11. Webb (2022). The Impact of Artificial Intelligence on the Labor Market [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150). Downloaded from the accompanying [site](https://www.notion.so/michaelwebb/Data-for-The-Impact-of-Artificial-Intelligence-on-the-Labor-Market-3b52b281505a48b8be107d11d8d0c363). DOWNLOAD: [exposure_by_occ1990dd_lswt2010.csv]()
+
+----------
+
+## Code
+
+----------
+
+## 
+
