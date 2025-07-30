@@ -2,6 +2,8 @@
 
 This repository contains the data and code to generate estimates in "All Quiet on the AI Front" analysis [link], and the accompanying Agglomerations post [link]. Accurate as of time of publication, [date of publication]. Contact nathan@eig.org with any questions.
 
+To run, download the data from the accompanying dropbox links into the /data/1raw folder. Intermediate data will be stored in /data/2wrangled, and final charts will be stored in /data/3final.
+
 ----------
 
 ## Data
@@ -26,6 +28,11 @@ This repository contains the data and code to generate estimates in "All Quiet o
 ----------
 
 ## Code
+
+1. <b>01 Crosswalks.R</b>
+2. 02 Microdata Monthly Build.R
+3. 03 Main Analysis.R
+4. 04 Appendix.R
 
 ----------
 
