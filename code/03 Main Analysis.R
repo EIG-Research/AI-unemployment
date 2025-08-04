@@ -18,6 +18,7 @@ library(blscrapeR)
 library(data.table)
 library(zoo)
 library(lubridate)
+library(purrr)
 
 # set project paths
 user_path = "/Users/sarah/Library/CloudStorage/GoogleDrive-sarah@eig.org/.shortcut-targets-by-id/0B8XLtQT1s8ceT2tKZWZmTkJmM1k"
@@ -49,7 +50,7 @@ quint_xposure_vars <- c(
 )
 
 # CPS - basic monthly
-cps_monthly_xposure = read_dta("cps_monthly_w_xposure_xwalked.dta")
+cps_monthly_xposure = read_dta(file.path(wrangled_path, "cps_monthly_w_xposure_xwalked.dta"))
 
 cps_monthly_xposure = cps_monthly_xposure %>%
   mutate(
@@ -325,7 +326,7 @@ unemp_share <- cps_monthly_2025 %>% group_by(AIOE_quint_wgt, unemp) %>%
     share_unemp = 100*sum(wtfinl * (unemp == 1)) / sum(wtfinl))
 
 educ_share <- cps_monthly_2025 %>% group_by(AIOE_quint_wgt, educ_cat) %>% 
-  filter(!is.na(educ_cat), AIOE_quint_wgt) %>% # missing
+  filter(!is.na(educ_cat), !is.na(AIOE_quint_wgt)) %>% # missing
   summarise(wt_total = sum(wtfinl), .groups = "drop") %>%
   group_by(AIOE_quint_wgt) %>%
   mutate(
@@ -349,8 +350,8 @@ mean_wages = cps_asec %>% group_by(AIOE_quint_wgt) %>%
   summarise(mean_incwage = weighted.mean(incwage, wt = wtfinl, na.rm = TRUE))
 
 # combine
-table = unemp_share %>% full_join(educ_share, by = var) %>%
-  full_join(sex_share, by = var) %>% full_join(mean_wages, by = var)
+table = unemp_share %>% full_join(educ_share, by = "AIOE_quint_wgt") %>%
+  full_join(sex_share, by = "AIOE_quint_wgt") %>% full_join(mean_wages, by = "AIOE_quint_wgt")
 
 # Save csv
 setwd(output_path)
@@ -359,6 +360,10 @@ write.csv(table, "3_summary_statistics.csv", row.names = FALSE)
 
 ################################################################################
 # Unemployment rate by AI exposure quintile
+
+remove(cps_asec)
+remove(cps_asec_2024)
+remove(cps_monthly_2025)
 
 var_source = "Felten et al. (2021)"
 crosswalk_version =  "using weighted abilities-based exposure (Felten et al. (2021)."
@@ -708,7 +713,6 @@ ggsave("10_employment_3digit_nacis.png", plot = plot_info_sector_jobs, width = 8
 ################################################################################
 # Change in Unemployment 2022/2023 to 2024/2025
 
-
 quint_vars <- c(
   "AIOE_quint_wgt", "gpt4_beta_quint_admin", "human_beta_quint_admin",
   "estz_core_quint_admin", "pct_ai_quint" 
@@ -724,7 +728,7 @@ results <- data.frame(
 for (i in seq_along(quint_vars)) {
   vname <- quint_vars[i]
   
-  df2 <- read_dta("cps_monthly_w_xposure_xwalked.dta") %>%
+  df2 <- cps_monthly_xposure %>%
     filter(year >= 2022, !is.na(.data[[vname]])) %>%
     mutate(
       unemp = ifelse(empstat <= 29, as.integer(empstat >= 20 & empstat <= 29) * 100, NA),
@@ -861,3 +865,5 @@ ggsave("11b_d_in_d.png",  width = 8, height = 5, dpi = 300, bg = "white")
       ) %>%
       ungroup() %>%
       select(year, AIOE_quint_wgt, share, pre_minus_post)
+
+    
