@@ -25,6 +25,9 @@ To run, download the data from the accompanying data from [dropbox](https://www.
 10. The Labor Impact of Generative AI on Firm Values (Eisfeldt, Schubert, Taska, Zhang, 2024).[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627). Downloaded from the accompanying [GitHub](https://github.com/gschubert/website/blob/gh-pages/genaiexp_estz_occscores.csv). FILE NAME: <b>genaiexp_estz_occscores.csv</b>
 11. Webb (2022). The Impact of Artificial Intelligence on the Labor Market [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150). Downloaded from the accompanying [site](https://www.notion.so/michaelwebb/Data-for-The-Impact-of-Artificial-Intelligence-on-the-Labor-Market-3b52b281505a48b8be107d11d8d0c363). FILE NAME: <b>exposure_by_occ1990dd_lswt2010.csv</b>
 
+### Other
+12. Business TRends and Outlook Survey data [BTOS](https://www.census.gov/hfp/btos/about) for National and Sector level respones. FILE NAMES: <b> National.xlsx, Sector.xlsx</b>
+
 ----------
 
 ## Code
