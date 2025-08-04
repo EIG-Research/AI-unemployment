@@ -16,7 +16,7 @@ To run, download the data from the accompanying data from [dropbox](https://www.
 ### Crosswalks
 5. 2010 SOC to 2018 SOC Crosswalk, downloaded from the [Bureau of Labor Statistics (BLS)](https://www.bls.gov/soc/2018/soc_2010_to_2018_crosswalk.xlsx). FILE NAME: <b>soc_2010_to_2018_crosswalk.xlsx</b>
 6. Census SOC to Census occupation code crosswalk, downloaded from [Census](https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html). FILE NAME: <b>2018-occupation-code-list-and-crosswalk.xlsx</b>
-7. [O*NET](https://www.onetcenter.org/db_releases.html) datasets 25.0, and 25.1. FILE NAMES: <b>db_25_0_excel.zip</b>, and <b>db_25_1_excel.zip</b>
+7. [O*NET](https://www.onetcenter.org/db_releases.html) datasets 25.0, and 25.1. FILE NAMES: <b>db_25_0_excel.zip, db_25_1_excel.zip</b>
 8. David Dorn to 1990 Census crosswalk, downloaded from [Dorn's website](https://www.ddorn.net/data.htm). FILE NAME:  <b>occ1990_occ1990dd.zip</b>
 
 ### AI Exposure measures
