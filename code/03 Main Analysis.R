@@ -41,6 +41,13 @@ setwd(wrangled_path)
 ################################################################################
 ################################################################################
 
+quint_xposure_vars <- c(
+  "AIOE_quint_wgt",
+  "gpt4_beta_quint_admin", "human_beta_quint_admin",
+  "estz_core_quint_admin",
+  "pct_ai_quint"
+)
+
 # CPS - basic monthly
 cps_monthly_xposure = read_dta("cps_monthly_w_xposure_xwalked.dta")
 
