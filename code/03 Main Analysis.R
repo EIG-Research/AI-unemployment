@@ -468,7 +468,7 @@ ggsave("5_out_of_lf_by_quintile.png", plot = lfpr_moving_plot, width = 8, height
 ################################################################################
 # Share of workers changing occupation by quintile
 
-occ_switching_plot <- ggplot(org_charts, aes(x = as.Date(yq), y = chgocc, color = factor(AIOE_quint_wgt)) +
+occ_switching_plot <- ggplot(org_charts, aes(x = as.Date(yq), y = chgocc, color = factor(AIOE_quint_wgt))) +
    geom_smooth(method = "loess", se = FALSE, span = 0.5, linewidth = 0.5) +  # LOESS lines
    geom_point(size = 1.8, alpha = 0.35) +  # Raw points
    scale_color_manual(
