@@ -21,13 +21,13 @@ To run, download the data from the accompanying data from [dropbox](https://www.
 8. CPS sample to construct 1990 OCC to 2018 OCC codes, downloaded from  [IPUMS](https://cps.ipums.org/cps/). FILE NAME: <b>cps_monthly_occ2018_occ1990_xwalk.dta.gz</b>
 
 ### AI Exposure measures
-8. Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. Strategic Management Journal, 42(12), 2195–2217. [https://doi.org/10.1002/smj.3286](https://doi.org/10.1002/smj.3286). Downloaded from the accompanying [GitHub](https://github.com/AIOE-Data/AIOE). FILE NAME: <b>AIOE_DataAppendix.xlsx</b>
-9. Tyna Eloundou et al., GPTs are GPTs: Labor market impact potential of LLMs. Science 384,1306-1308 (2024). [https://arxiv.org/abs/2303.10130](https://arxiv.org/abs/2303.10130). Downloaded from the accompanying [GitHub](https://github.com/openai/GPTs-are-GPTs). FILE NAME: <b>gptsRgpts_occ_lvl.csv</b>
-10. The Labor Impact of Generative AI on Firm Values (Eisfeldt, Schubert, Taska, Zhang, 2024).[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627). Downloaded from the accompanying [GitHub](https://github.com/gschubert/website/blob/gh-pages/genaiexp_estz_occscores.csv). FILE NAME: <b>genaiexp_estz_occscores.csv</b>
-11. Webb (2022). The Impact of Artificial Intelligence on the Labor Market [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150). Downloaded from the accompanying [site](https://www.notion.so/michaelwebb/Data-for-The-Impact-of-Artificial-Intelligence-on-the-Labor-Market-3b52b281505a48b8be107d11d8d0c363). FILE NAME: <b>exposure_by_occ1990dd_lswt2010.csv</b>
+9. Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. Strategic Management Journal, 42(12), 2195–2217. [https://doi.org/10.1002/smj.3286](https://doi.org/10.1002/smj.3286). Downloaded from the accompanying [GitHub](https://github.com/AIOE-Data/AIOE). FILE NAME: <b>AIOE_DataAppendix.xlsx</b>
+10. Tyna Eloundou et al., GPTs are GPTs: Labor market impact potential of LLMs. Science 384,1306-1308 (2024). [https://arxiv.org/abs/2303.10130](https://arxiv.org/abs/2303.10130). Downloaded from the accompanying [GitHub](https://github.com/openai/GPTs-are-GPTs). FILE NAME: <b>gptsRgpts_occ_lvl.csv</b>
+11. The Labor Impact of Generative AI on Firm Values (Eisfeldt, Schubert, Taska, Zhang, 2024).[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627). Downloaded from the accompanying [GitHub](https://github.com/gschubert/website/blob/gh-pages/genaiexp_estz_occscores.csv). FILE NAME: <b>genaiexp_estz_occscores.csv</b>
+12. Webb (2022). The Impact of Artificial Intelligence on the Labor Market [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150). Downloaded from the accompanying [site](https://www.notion.so/michaelwebb/Data-for-The-Impact-of-Artificial-Intelligence-on-the-Labor-Market-3b52b281505a48b8be107d11d8d0c363). FILE NAME: <b>exposure_by_occ1990dd_lswt2010.csv</b>
 
 ### Other
-12. Business TRends and Outlook Survey data [BTOS](https://www.census.gov/hfp/btos/about) for National and Sector level respones. FILE NAMES: <b> National.xlsx, Sector.xlsx</b>
+13. Business TRends and Outlook Survey data [BTOS](https://www.census.gov/hfp/btos/about) for National and Sector level respones. FILE NAMES: <b> National.xlsx, Sector.xlsx</b>
 
 ----------
 
