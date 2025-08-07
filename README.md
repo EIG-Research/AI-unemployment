@@ -1,6 +1,6 @@
 # All Quiet on the AI Front 
 
-This repository contains the data and code to generate estimates in "AI and Jobs: The Final Word (Until the Next One)" analysis [link], and the accompanying Agglomerations post [link]. Accurate as of time of publication, [date of publication]. Contact sarah@eig.org with any questions.
+This repository contains the data and code to generate estimates in "AI and Jobs: The Final Word (Until the Next One)" analysis [link], and the accompanying Agglomerations post [link]. Accurate as of time of publication, [date of publication]. Contact sarah@eig.org and nathan@eig.org with any questions.
 
 To run, download the data from the accompanying data from [dropbox](https://www.dropbox.com/scl/fo/34xtxjwatomz5vlgzwj5j/AJSUajyhLOZgaXk5I32TJoM?rlkey=9wxaewm3whxmtsqmxs36sqslo&st=lbt2r4ml&dl=0) into the /data/1raw folder. Intermediate data will be stored in /data/2wrangled, and final charts will be stored in /data/3final.
 
