@@ -76,10 +76,6 @@ cps_monthly_xposure = cps_monthly_xposure %>%
 
 table(cps_monthly_xposure$year, cps_monthly_xposure$month)
 
-# CPS - asec
-cps_asec = read_dta("cps_asec_w_xposure_xwalked.dta")
-
-
 # CPS - outgoing rotational group
 cps_org = read_dta(file.path(wrangled_path, "cps_org_w_xposure_xwalked.dta"))
 
@@ -331,6 +327,9 @@ logo_grob <- rasterGrob(
 
 cps_monthly_2025 = cps_monthly_xposure %>% filter(year == 2025)
 
+# CPS - asec
+cps_asec = read_dta("cps_asec_w_xposure_xwalked.dta")
+
 # extract 2024 sample
 cps_asec_2024 = cps_asec %>% filter(year == 2024) %>%
   filter(incwage != 99999999) # niu
@@ -366,8 +365,10 @@ mean_wages = cps_asec %>% group_by(AIOE_quint_wgt) %>%
   summarise(mean_incwage = weighted.mean(incwage, wt = wtfinl, na.rm = TRUE))
 
 # combine
-table = unemp_share %>% full_join(educ_share, by = AIOE_quint_wgt) %>%
-  full_join(sex_share, by = AIOE_quint_wgt) %>% full_join(mean_wages, by = AIOE_quint_wgt)
+table = unemp_share %>%
+  full_join(educ_share, by = "AIOE_quint_wgt") %>%
+  full_join(sex_share, by = "AIOE_quint_wgt") %>%
+  full_join(mean_wages, by = "AIOE_quint_wgt")
 
 # Save csv
 setwd(output_path)

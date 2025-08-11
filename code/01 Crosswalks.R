@@ -21,6 +21,7 @@ library(tidyr)
 library(dplyr)
 library(readxl)
 library(stringr)
+library(haven)
 
 # set project paths
 user_path = "ENTER-USER-PATH"
