@@ -26,7 +26,7 @@ library(purrr)
 
 # set project paths
 user_path = "ENTER-USER-PATH"
-project_path = file.path(user_path, "AI Unemployment")
+project_path = file.path(user_path, "AI-Unemployment")
 data_path = file.path(project_path, "data/1raw")
 wrangled_path = file.path(project_path, "data/2wrangled")
 
@@ -280,8 +280,6 @@ cps_org = cps_org %>% mutate(id = group_indices(., hrhhid, hrhhid2, pulineno)) %
 # Join nested options to CPS
 cps_with_xwalk_options <- cps_org %>%
   left_join(xwalk_nested, by = c("occ10" = "occ2010")) # then NULL crosswalks are the not in universe (0)
-
-rm(cps_org)
 
 # Randomly assign one occ2018 per person using xwalk weights
 set.seed(123)  # for reproducibility

@@ -24,7 +24,7 @@ library(stringr)
 
 # set project paths
 user_path = "ENTER-USER-PATH"
-project_path = file.path(user_path, "AI Unemployment")
+project_path = file.path(user_path, "AI-Unemployment")
 data_path = file.path(project_path, "data/1raw")
 wrangled_path = file.path(project_path, "data/2wrangled")
 
@@ -339,19 +339,6 @@ census_occ_2010_occ_2018_xwalk <- bind_rows(
 
 setwd(wrangled_path)
 write.csv(census_occ_2010_occ_2018_xwalk, "census_occ_2010_occ_2018_xwalk_cleaned_population_weighted.csv")
-
-
-xwalk_nested <- census_occ_2010_occ_2018_xwalk %>%
-  group_by(occ2010) %>%
-  summarise(
-    occ2018_options = list(occ2018),
-    weights = list(xwalk_wt_fnl),
-    .groups = "drop"
-  )
-
-setwd(wrangled_path)
-write.csv(xwalk_nested, "census_occ_2010_occ_2018_xwalk_cleaned_population_weighted_nested.csv")
-
 
 #################################################################################
 #################################################################################

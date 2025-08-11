@@ -25,7 +25,7 @@ library(purrr)
 
 # set project paths
 user_path = "ENTER-USER-PATH"
-project_path = file.path(user_path, "AI Unemployment")
+project_path = file.path(user_path, "AI-Unemployment")
 data_path = file.path(project_path, "data/1raw")
 wrangled_path = file.path(project_path, "data/2wrangled")
 output_path = file.path(project_path, "data/3final/mainline_text")
@@ -342,7 +342,7 @@ unemp_share <- cps_monthly_2025 %>% group_by(AIOE_quint_wgt, unemp) %>%
     share_unemp = 100*sum(wtfinl * (unemp == 1)) / sum(wtfinl))
 
 educ_share <- cps_monthly_2025 %>% group_by(AIOE_quint_wgt, educ_cat) %>% 
-  filter(!is.na(educ_cat), AIOE_quint_wgt) %>% # missing
+  filter(!is.na(educ_cat), !is.na(AIOE_quint_wgt)) %>% # missing
   summarise(wt_total = sum(wtfinl), .groups = "drop") %>%
   group_by(AIOE_quint_wgt) %>%
   mutate(
@@ -366,8 +366,8 @@ mean_wages = cps_asec %>% group_by(AIOE_quint_wgt) %>%
   summarise(mean_incwage = weighted.mean(incwage, wt = wtfinl, na.rm = TRUE))
 
 # combine
-table = unemp_share %>% full_join(educ_share, by = var) %>%
-  full_join(sex_share, by = var) %>% full_join(mean_wages, by = var)
+table = unemp_share %>% full_join(educ_share, by = AIOE_quint_wgt) %>%
+  full_join(sex_share, by = AIOE_quint_wgt) %>% full_join(mean_wages, by = AIOE_quint_wgt)
 
 # Save csv
 setwd(output_path)

@@ -18,10 +18,11 @@ library(data.table)
 library(zoo)
 library(lubridate)
 library(purrr)
+library(ggcorrplot)
 
 # set project paths
 user_path = "ENTER-USER-PATH"
-project_path = file.path(user_path, "AI Unemployment")
+project_path = file.path(user_path, "AI-Unemployment")
 data_path = file.path(project_path, "data/1raw")
 wrangled_path = file.path(project_path, "data/2wrangled")
 output_path = file.path(project_path, "data/3final/appendix")
